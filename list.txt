@@ -1,0 +1,34 @@
+Run options: include {:full_description=>/signin\ with\ invalid\ information/}
+FFF
+
+Failures:
+
+  1) AuthenticationPages signin with invalid information 
+     Failure/Error: it { should have_title('Sign in') }
+     NoMethodError:
+       undefined method `has_title?' for "with invalid information":String
+     # ./spec/requests/authentication_pages_spec.rb:18:in `block (4 levels) in <top (required)>'
+
+  2) AuthenticationPages signin with invalid information 
+     Failure/Error: it { should have_selector('div.alert.alert-error') }
+     NoMethodError:
+       undefined method `has_selector?' for "with invalid information":String
+     # ./spec/requests/authentication_pages_spec.rb:19:in `block (4 levels) in <top (required)>'
+
+  3) AuthenticationPages signin with invalid information after visiting another page 
+     Failure/Error: it { should_not have_selector('div.alert.alert-error') }
+     NoMethodError:
+       undefined method `has_selector?' for "after visiting another page":String
+     # ./spec/requests/authentication_pages_spec.rb:23:in `block (5 levels) in <top (required)>'
+
+Finished in 0.62404 seconds
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/requests/authentication_pages_spec.rb:18 # AuthenticationPages signin with invalid information 
+rspec ./spec/requests/authentication_pages_spec.rb:19 # AuthenticationPages signin with invalid information 
+rspec ./spec/requests/authentication_pages_spec.rb:23 # AuthenticationPages signin with invalid information after visiting another page 
+
+Randomized with seed 2988
+
